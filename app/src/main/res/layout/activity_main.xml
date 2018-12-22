@@ -1,18 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.zxw.flowlayout.FlowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            style="@style/text_tag"
+            android:text="华为Mate20" />
+
+        <TextView
+            style="@style/text_tag"
+            android:text="小米8" />
+
+        <TextView
+            style="@style/text_tag"
+            android:text="Apple iPhone XS Max" />
+
+        <TextView
+            style="@style/text_tag"
+            android:text="荣耀9i" />
+
+        <TextView
+            style="@style/text_tag"
+            android:text="一加手机6T" />
+
+        <TextView
+            style="@style/text_tag"
+            android:text="vivo X23" />
+
+        <TextView
+            style="@style/text_tag"
+            android:text="OPPO R17" />
+    </com.zxw.flowlayout.FlowLayout>
+
+</LinearLayout>
