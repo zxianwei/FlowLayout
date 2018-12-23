@@ -146,6 +146,26 @@ public class FlowLayout extends ViewGroup {
             curLeft = 0;
             curTop += mLineHeightList.get(i);
         }
+    }
 
+    /**
+     * 添加点击事件
+     */
+    public interface OnItemClickListener {
+        void onItemClick(View v, int i);
+    }
+    public void setOnitemClickListener(final OnItemClickListener onitemClickListener){
+        int childCount = getChildCount();
+        for (int i = 0; i <childCount ; i++) {
+            View childAt = getChildAt(i);
+            final int finalI = i;
+            childAt.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onitemClickListener.onItemClick(v, finalI);
+                }
+            });
+
+        }
     }
 }
