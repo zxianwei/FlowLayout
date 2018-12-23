@@ -60,11 +60,9 @@ public class FlowLayout extends ViewGroup {
         int iCurLineW = 0;
         int iCurLineH = 0;
         //保存view
-
         if (iWidthMode == MeasureSpec.EXACTLY && iHeightMode == MeasureSpec.EXACTLY) {
             measureWidth = iWidthSize;
-            measureHeight = iHeightSize
-            ;
+            measureHeight = iHeightSize;
         } else {
             int childCount = getChildCount();
             int childWidth = 0;
@@ -82,7 +80,7 @@ public class FlowLayout extends ViewGroup {
 
                     //1. 记录当前行的最大宽度，高度累计添加
                     measureWidth = Math.max(measureWidth, iCurLineW);
-                    measureHeight = iCurLineH;
+                    measureHeight += iCurLineH;
                     //把view保存到集合中
                     mViewLineList.add(viewList);
                     //把高保存到集合中
